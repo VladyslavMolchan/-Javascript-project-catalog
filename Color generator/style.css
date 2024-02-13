@@ -1,0 +1,109 @@
+body {
+    background-image: url('./bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    overflow: hidden;
+}
+
+.color-generator {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.color-heading {
+    transition: color 2s ease;
+}
+
+.color-preview {
+    width: 280px;
+    height: 280px;
+    margin: 25px auto;
+    background-color: #fff;
+    box-shadow: 0px 2px 42px rgba(2, 3, 2, 7);
+    border: 5px solid black;
+}
+
+.color-text {
+    font-size: 22px;
+    margin: 15px 0;
+    color: #fff;
+    font-weight: 700;
+}
+
+.generate-button, .gradient-link {
+    border: 2px solid black;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #9EEFE1 0%, #3B13E5 51%, #E00F44 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    transition: .5s;
+    position: relative;
+    
+}
+
+.generate-button:hover, .gradient-link:hover {
+    background-position: right center;
+    transform: scale(1.1); 
+}
+
+.generate-button:active, .gradient-link:active {
+    top: 1px;
+}
+
+@media screen and (min-width: 2560px) {
+    h1 {
+        font-size: 120px;
+    }
+
+    .color-generator {
+        margin-top: 150px;
+    }
+
+    .color-preview {
+        width: 700px;
+        height: 700px;
+    }
+    .color-text {
+        font-size: 54px;
+    }
+
+    .generate-button, .gradient-link {
+        font-size: 55px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .color-generator {
+        margin-top: 50px;
+    }
+    .color-preview {
+        width: 200px;
+        height: 200px;
+    }
+    .color-text {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .color-generator {
+        margin-top: 30px;
+    }
+    .color-preview {
+        width: 150px;
+        height: 150px;
+    }
+    .color-text {
+        font-size: 16px;
+    }
+}

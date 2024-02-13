@@ -1,0 +1,232 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url("./bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.calculator {
+  background-color: #94b185;
+  border: 1px solid #ccc;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 10px;
+}
+
+#display {
+  width: 92%;
+  padding: 8px 12px;
+  font-size: 27px;
+  margin-bottom: 20px;
+  text-align: right;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: rgb(167, 241, 241);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 8px;
+}
+
+button {
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.num-button {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.operator-button,
+.calculate-button,
+.clear-button,
+.percentage-button {
+  background-color: #ff9800;
+  color: #fff;
+}
+
+.num-button:hover {
+  background-color: #ecdbc0;
+}
+
+.atuin-btn {
+  display: inline-flex;
+  margin: 10px;
+  text-decoration: none;
+  position: absolute;
+  bottom: 10px;
+
+  font-size: 20px;
+  line-height: 20px;
+  padding: 12px 30px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", Тahoma, sans-serif;
+  background: #ff9800;
+  cursor: pointer;
+  border: 2px solid #bfe2ff;
+  overflow: hidden;
+  z-index: 1;
+}
+.atuin-btn:hover,
+.atuin-btn:active,
+.atuin-btn:focus {
+  color: #fff;
+}
+.atuin-btn:before,
+.atuin-btn:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 100%;
+  background-color: rgb(167, 241, 241);
+  z-index: -1;
+}
+.atuin-btn:before {
+  left: -20px;
+  transform: translate(-50%, -50%);
+}
+.atuin-btn:after {
+  right: -20px;
+  transform: translate(50%, -50%);
+}
+.atuin-btn:hover:before,
+.atuin-btn:active:before,
+.atuin-btn:focus:before {
+  animation: from-left 0.5s both;
+}
+.atuin-btn:hover:after,
+.atuin-btn:active:after,
+.atuin-btn:focus:after {
+  animation: from-right 0.5s both;
+}
+@keyframes from-right {
+  0% {
+    right: -20px;
+  }
+  50% {
+    right: 50%;
+    width: 20px;
+  }
+  100% {
+    right: 50%;
+    width: 100%;
+  }
+}
+@keyframes from-left {
+  0% {
+    left: -20px;
+  }
+  50% {
+    left: 50%;
+    width: 20px;
+  }
+  100% {
+    left: 50%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .calculator {
+    padding: 20px;
+    border-radius: 4px;
+    max-width: 200px;
+  }
+
+  #display {
+    padding: 4px 6px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: right;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 4px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 13px;
+    border-radius: 2px;
+  }
+}
+
+@media (max-width: 768px) {
+  .calculator {
+    padding: 35px;
+    border-radius: 7px;
+    max-width: 300px;
+  }
+
+  #display {
+    width: 95%;
+    padding: 6px 7px;
+    font-size: 25px;
+    margin-bottom: 15px;
+    text-align: right;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 4px;
+  }
+
+  button {
+    padding: 13px;
+    font-size: 16px;
+    border-radius: 3px;
+  }
+}
+
+@media (min-width: 2000px) {
+  .calculator {
+    padding: 55px;
+    border-radius: 10px;
+    max-width: 550px;
+  }
+
+  #display {
+    width: 95%;
+    padding: 8px 9px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: right;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 4px;
+  }
+
+  button {
+    padding: 17px;
+    font-size: 26px;
+    border-radius: 6px;
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Simon Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="simon-board">
+    <h1>The Simon Game</h1>
+    <div class="row">
+      <div class="simon-button" id="green" data-color="green"></div>
+      <div class="simon-button" id="red" data-color="red"></div>
+    </div>
+    <div class="row">
+      <div class="simon-button" id="yellow" data-color="yellow"></div>
+      <div class="simon-button" id="blue" data-color="blue"></div>
+    </div>
+    <div id="level">Level: 1 (Your Turn)</div>
+    <div id="highest-level">Highest Level: 0</div>
+    <div id="message"></div>
+    <button id="start-button" class="shine-button" onclick="startGame()">Start</button>
+    <button id="reset-button" class="shine-button" onclick="resetGame()">Reset</button>
+    <button id="reset-highest-button" class="shine-button" onclick="resetHighestLevel()">Reset Highest</button>
+    <div id="countdown"></div>
+    <div class="options-container">
+      <input type="checkbox" id="mute-checkbox">
+      <label for="mute-checkbox">Mute Sound</label>
+      <label for="speed-slider">Speed:</label>
+      <input type="range" id="speed-slider" min="1" max="5" value="3">
+    </div>
+    <a href="../index.html" class="shine-button back-button">Back</a>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
